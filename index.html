@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PertevSBK | Çok Yakında</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 class="title">PertevSBK</h1>
+            <h2 class="subtitle">ÇOK YAKINDA</h2>
+            <p class="description">Çok yakında birlikte olacağız. — PertevSBK Organizasyon Ekibi</p>
+            
+            <div class="countdown-container">
+                <div class="countdown-with-date">
+                    <div class="countdown-box">
+                        <div class="countdown" id="countdown">
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="days">00</span>
+                                <span class="countdown-label">GÜN</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="hours">00</span>
+                                <span class="countdown-label">SAAT</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="minutes">00</span>
+                                <span class="countdown-label">DAKİKA</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="seconds">00</span>
+                                <span class="countdown-label">SANİYE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date-box">
+                        <div class="event-date">
+                            <span class="completion-text">ETKİNLİK TARİHİ: 2-3 MAYIS 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="description">Çok yakında birlikte olacağız. — PertevSBK Organizasyon Ekibi</p>
+            
+            <div class="social-links">
+                <a href="https://www.instagram.com/pertevsbk/" target="_blank" class="instagram-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke="currentColor" stroke-width="2"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Instagram
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">Bu site <span class="developer">PertevSBK için Yiğit Efe SEVİR</span> tarafından tasarlandı ve geliştirildi</p>
+            <p class="footer-copyright"> 2026 PertevSBK Tüm hakları saklıdır.</p>
+            <p class="footer-copyright">© 2026 PertevSBK Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Etkinlik tarihi: 2 Mayıs 2026, 00:00
+        const eventDate = new Date('May 2, 2026 00:00:00').getTime();
+        
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+            
+            // Zaman hesaplamaları
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // DOM güncelleme
+            document.getElementById('days').innerText = days.toString().padStart(2, '0');
+            document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+            
+            // Etkinlik zamanı geçtiyse
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('countdown').innerHTML = '<div class="event-live">ETKİNLİK BAŞLADI!</div>';
+            }
+        }
+        
+        // Sayfa yüklendiğinde başlat
+        let countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Hemen güncelle
+    </script>
+</body>
+</html>
