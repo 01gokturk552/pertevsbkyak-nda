@@ -539,6 +539,47 @@ body::before {
     color: rgba(255, 255, 255, 0.8);
 }
 
+/* Google Forms Container */
+.form-container {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+    transition: all 0.3s ease;
+}
+
+.form-container:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-heavy);
+}
+
+.form-container iframe {
+    border: none;
+    border-radius: 8px;
+    min-height: 800px;
+}
+
+.form-note {
+    background: rgba(232, 72, 85, 0.1);
+    border: 1px solid rgba(232, 72, 85, 0.2);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.form-note p {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.form-note strong {
+    color: var(--accent-primary);
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .nav {
@@ -566,6 +607,10 @@ body::before {
     
     .footer-credits {
         text-align: center;
+    }
+    
+    .form-container iframe {
+        min-height: 600px;
     }
 }
 
