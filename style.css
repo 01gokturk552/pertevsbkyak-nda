@@ -897,6 +897,60 @@ body::before {
     margin: 0 auto;
 }
 
+/* Moderators Visual Section */
+.moderators-visual {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.moderator-photo {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.moderator-photo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent-primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.moderator-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid var(--accent-primary);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.moderator-photo:hover .moderator-img {
+    transform: scale(1.05);
+    border-color: var(--accent-secondary);
+}
+
+.moderator-photo h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 0.5rem 0;
+}
+
+.moderator-photo p {
+    font-size: 0.9rem;
+    color: var(--accent-primary);
+    margin: 0;
+    font-weight: 500;
+}
+
 /* Committee Visual Section */
 .committee-visual {
     margin-bottom: 2rem;
