@@ -897,6 +897,51 @@ body::before {
     margin: 0 auto;
 }
 
+/* Committee Visual Section */
+.committee-visual {
+    margin-bottom: 2rem;
+}
+
+.committee-visual h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.committee-visual h3::before {
+    content: '🖼️';
+    font-size: 1rem;
+}
+
+.visual-placeholder {
+    background: rgba(255, 255, 255, 0.02);
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.visual-placeholder:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.visual-placeholder p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin: 0;
+    font-style: italic;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .nav {
