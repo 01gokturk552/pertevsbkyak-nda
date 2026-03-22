@@ -810,14 +810,6 @@ body::before {
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.committee-moderators h3::before {
-    content: '👥';
-    font-size: 1.2rem;
 }
 
 .moderators-list {
@@ -857,14 +849,97 @@ body::before {
     margin: 0;
 }
 
+/* Professional Topics Section */
 .committee-topics {
-    background: rgba(232, 72, 85, 0.05);
-    border: 1px solid rgba(232, 72, 85, 0.1);
-    border-radius: 12px;
-    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(232, 72, 85, 0.08) 0%, rgba(139, 0, 0, 0.05) 100%);
+    border: 1px solid rgba(232, 72, 85, 0.15);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.committee-topics::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    opacity: 0.6;
 }
 
 .committee-topics h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.committee-topics h3::before {
+    content: '�';
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+.committee-topics ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.8rem;
+}
+
+.committee-topics li {
+    padding: 1rem 1.2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 2.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.committee-topics li::before {
+    content: '▸';
+    position: absolute;
+    left: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.committee-topics li:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(232, 72, 85, 0.3);
+    color: var(--text-primary);
+    transform: translateX(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.committee-topics li:hover::before {
+    transform: translateY(-50%) translateX(4px);
+    color: var(--accent-secondary);
+}
+
+.committee-visual {
+    margin-bottom: 2rem;
+}
+
+.committee-visual h3 {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-primary);
@@ -874,46 +949,33 @@ body::before {
     gap: 0.5rem;
 }
 
-.committee-topics h3::before {
-    content: '📋';
-    font-size: 1rem;
+.committee-visual h3::before {
+    display: none;
 }
 
-.committee-topics ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.committee-topics li {
-    padding: 0.75rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 0.95rem;
-    position: relative;
-    padding-left: 1.5rem;
+.visual-placeholder {
+    background: rgba(255, 255, 255, 0.02);
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.3s ease;
 }
 
-.committee-topics li::before {
-    content: '▸';
-    position: absolute;
-    left: 0;
-    color: var(--accent-primary);
-    font-weight: bold;
-    transition: transform 0.3s ease;
+.visual-placeholder:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
-.committee-topics li:hover {
-    color: var(--text-primary);
-    padding-left: 2rem;
-}
-
-.committee-topics li:hover::before {
-    transform: translateX(0.5rem);
-}
-
-.committee-topics li:last-child {
-    border-bottom: none;
+.visual-placeholder p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin: 0;
+    font-style: italic;
 }
 
 /* Enhanced Committee Grid */
