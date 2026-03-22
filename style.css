@@ -2941,3 +2941,184 @@ body::before {
         display: none;
     }
 }
+
+/* Hakkımızda - Professional Styles */
+.vision-mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.vision-card, .mission-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.vision-card::before, .mission-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.vision-card:hover::before, .mission-card:hover::before {
+    transform: scaleX(1);
+}
+
+.vision-card:hover, .mission-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.4s ease;
+}
+
+.vision-card:hover .card-icon, .mission-card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.card-icon img {
+    filter: brightness(0) invert(1);
+}
+
+.vision-title, .mission-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.vision-card p, .mission-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.values-section {
+    margin-bottom: 4rem;
+}
+
+.values-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.value-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.value-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.value-item:hover::before {
+    transform: scaleX(1);
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.value-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.4s ease;
+}
+
+.value-item:hover .value-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.value-icon img {
+    filter: brightness(0) invert(1);
+}
+
+.value-item h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.value-item p {
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Responsive for Hakkımızda */
+@media (max-width: 768px) {
+    .vision-mission-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .vision-card, .mission-card {
+        padding: 2rem;
+    }
+    
+    .vision-title, .mission-title {
+        font-size: 1.5rem;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .value-item {
+        padding: 1.5rem;
+    }
+}
