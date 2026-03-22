@@ -1,9 +1,9 @@
-/* Modern Renk Sistemi */
+/* PertevSBK Renk Sistemi */
 :root {
-    /* Ana Renkler - Bordo Tema */
-    --primary-dark: #1A0E0E;      /* Ana bordo */
-    --primary-medium: #2D1818;    /* Orta bordo */
-    --primary-light: #4A2525;     /* Açık bordo */
+    /* Ana Renkler - PertevSBK Bordo Teması */
+    --primary-dark: #28060B;      /* Ana PertevSBK bordo */
+    --primary-medium: #1A0000;    /* Orta PertevSBK bordo */
+    --primary-light: #0C0000;     /* Açık PertevSBK bordo */
     
     /* Vurgu Renkleri */
     --accent-primary: #E84855;    /* Kırmızı vurgu */
@@ -19,10 +19,10 @@
     --black: #000000;             /* Saf siyah */
     
     /* Şeffaflıklar */
-    --overlay-light: rgba(26, 14, 14, 0.05);
-    --overlay-medium: rgba(26, 14, 14, 0.1);
-    --overlay-dark: rgba(26, 14, 14, 0.2);
-    --overlay-heavy: rgba(26, 14, 14, 0.8);
+    --overlay-light: rgba(40, 6, 11, 0.05);
+    --overlay-medium: rgba(40, 6, 11, 0.1);
+    --overlay-dark: rgba(40, 6, 11, 0.2);
+    --overlay-heavy: rgba(40, 6, 11, 0.8);
     
     /* Metin Renkleri */
     --text-primary: #FFFFFF;      /* Ana metin */
@@ -31,7 +31,7 @@
     --text-accent: #FFD93D;       /* Vurgu metin */
     
     /* Arka Planlar */
-    --bg-primary: linear-gradient(135deg, #1A0E0E 0%, #2D1818 50%, #4A2525 100%);
+    --bg-primary: linear-gradient(135deg, #28060B 0%, #1A0000 50%, #0C0000 100%);
     --bg-card: rgba(255, 255, 255, 0.08);
     --bg-hover: rgba(255, 255, 255, 0.12);
     --bg-active: rgba(232, 72, 85, 0.1);
