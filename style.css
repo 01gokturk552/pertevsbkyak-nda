@@ -1454,6 +1454,25 @@ body::before {
     font-weight: 600;
 }
 
+/* Wide transport item for bus */
+.transport-item-wide {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 0.6rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    grid-column: 1 / -1;
+}
+
+.transport-item-wide:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
 /* Map Section */
 .map-section {
     margin-top: 0;
