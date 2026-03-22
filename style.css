@@ -883,7 +883,7 @@ body::before {
 }
 
 .committee-topics h3::before {
-    content: '�';
+    content: '';
     font-size: 1.1rem;
     opacity: 0.8;
 }
@@ -1093,6 +1093,108 @@ body::before {
     font-size: 1.1rem;
     margin: 0;
     font-style: italic;
+}
+
+/* About Page Icons */
+.vision-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.vision-title::before {
+    content: '👁️';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    opacity: 0.3;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.mission-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 2.5rem 0 1.5rem 0;
+    position: relative;
+    padding-left: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.mission-title::before {
+    content: '🎯';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    opacity: 0.3;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.vision-title:hover::before,
+.mission-title:hover::before {
+    opacity: 0.6;
+    filter: grayscale(50%);
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* About Page Styling */
+.about-content {
+    padding: 4rem 0;
+}
+
+.about-text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.values-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.values-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+}
+
+.values-list li:last-child {
+    border-bottom: none;
+}
+
+.values-list strong {
+    color: var(--accent-primary);
+    font-weight: 600;
 }
 
 /* Responsive Design */
