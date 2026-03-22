@@ -1351,7 +1351,7 @@ body::before {
     color: var(--accent-primary);
 }
 
-/* Transport Section - Compact Design */
+/* Transport Section - Modern Icon Design */
 .transport-info {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -1398,12 +1398,21 @@ body::before {
     flex-shrink: 0;
     width: 30px;
     text-align: center;
+    background: rgba(232, 72, 85, 0.1);
+    border: 1px solid rgba(232, 72, 85, 0.2);
+    border-radius: 6px;
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .transport-item:hover .transport-icon {
     opacity: 1;
     filter: grayscale(0%);
-    transform: scale(1.1);
+    transform: scale(1.05);
+    background: rgba(232, 72, 85, 0.2);
+    border-color: var(--accent-primary);
 }
 
 .transport-details {
