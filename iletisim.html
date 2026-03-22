@@ -17,7 +17,7 @@
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <div class="nav-menu" id="navMenu">
                 <a href="index.html" class="nav-link">Ana Sayfa</a>
-                <a href="komiteler.html" class="nav-link">Komiteler</a>
+                <a href="komiteler/komiteler.html" class="nav-link">Komiteler</a>
                 <a href="program.html" class="nav-link">Program</a>
                 <a href="ekibimiz.html" class="nav-link">Ekibimiz</a>
                 <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
@@ -40,7 +40,8 @@
             <div class="container">
                 <div class="contact-grid">
                     <div class="contact-info">
-                        <h2>İletişim Bilgileri</h2>
+                        <h2 class="contact-title">İletişim Bilgileri</h2>
+                        
                         <div class="contact-item">
                             <div class="contact-icon">📧</div>
                             <div class="contact-details">
@@ -48,6 +49,131 @@
                                 <p>info@pertevsbk.com</p>
                             </div>
                         </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h3>Adres</h3>
+                                <p>Pertevniyal Lisesi<br>Mecidiyeköy, Şişli<br>İstanbul, Türkiye</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-details">
+                                <h3>Sosyal Medya</h3>
+                                <div class="social-links">
+                                    <a href="#" class="social-link">Instagram</a>
+                                    <a href="#" class="social-link">Twitter</a>
+                                    <a href="#" class="social-link">LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-hours">
+                            <h3>Çalışma Saatleri</h3>
+                            <p>Pazartesi - Cuma: 09:00 - 17:00</p>
+                            <p>Hafta Sonu: Kapalı</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h2 class="contact-title">Mesaj Gönderin</h2>
+                        <form class="form">
+                            <div class="form-group">
+                                <label for="name">Adınız Soyadınız</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">E-posta Adresiniz</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Konu</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Mesajınız</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary">Mesajı Gönder</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="map-section">
+                    <h2 class="map-title">Konumumuz</h2>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3006.72184883435!2d28.950431!3d41.0106832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab987fea2c943%3A0x79bd193072ae9667!2sPertevniyal+Lisesi!5e0!3m2!1str!2str!4v1710123456789!5m2!1str!2str" 
+                            width="100%" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    
+                    <div class="map-info">
+                        <div class="map-directions">
+                            <h3>Yol Tarifleri</h3>
+                            <div class="direction-item">
+                                <strong>Metro:</strong>
+                                <p>Mecidiyeköy Metro İstasyonu'ndan 5 dakika yürüme mesafesi</p>
+                            </div>
+                            <div class="direction-item">
+                                <strong>Otobüs:</strong>
+                                <p>29C, 29D, 41S, 46Ç, 54HT, 64, 66 gibi birçok hat</p>
+                            </div>
+                            <div class="direction-item">
+                                <strong>Otomobil:</strong>
+                                <p>Okul önünde otopark imkanı mevcuttur</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>PertevSBK</h4>
+                    <p>Pertevniyal Sosyal Bilimler Kulübü olarak gençlerin fikir meydanlarında buluştuğu, düşüncenin ve üretimin merkezde olduğu bir platform.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Ana Sayfa</a>
+                    <a href="komiteler/komiteler.html">Komiteler</a>
+                    <a href="program.html">Program</a>
+                    <a href="ekibimiz.html">Ekibimiz</a>
+                    <a href="hakkimizda.html">Hakkımızda</a>
+                    <a href="faaliyetlerimiz.html">Faaliyetler</a>
+                    <a href="iletisim.html">İletişim</a>
+                    <a href="basvuru.html">Başvuru</a>
+                </div>
+                <div class="footer-credits">
+                    <p>&copy; 2026 PertevSBK. Tüm hakları saklıdır.</p>
+                    <p>Düşün. Tartış. Üret.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
                         <div class="contact-item">
                             <div class="contact-icon">📱</div>
                             <div class="contact-details">
