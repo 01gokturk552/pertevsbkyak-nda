@@ -1247,19 +1247,31 @@ body::before {
 }
 
 .contact-icon {
-    font-size: 2rem;
+    font-size: 1.8rem;
     opacity: 0.6;
     filter: grayscale(50%);
     transition: all 0.3s ease;
     flex-shrink: 0;
     width: 60px;
+    height: 60px;
     text-align: center;
+    background: linear-gradient(135deg, rgba(232, 72, 85, 0.15) 0%, rgba(139, 0, 0, 0.1) 100%);
+    border: 2px solid rgba(232, 72, 85, 0.3);
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(232, 72, 85, 0.2);
 }
 
 .contact-item:hover .contact-icon {
     opacity: 1;
     filter: grayscale(0%);
     transform: scale(1.1);
+    background: linear-gradient(135deg, rgba(232, 72, 85, 0.25) 0%, rgba(139, 0, 0, 0.15) 100%);
+    border-color: var(--accent-primary);
+    box-shadow: 0 6px 20px rgba(232, 72, 85, 0.4);
 }
 
 .contact-details {
@@ -1397,22 +1409,25 @@ body::before {
     transition: all 0.3s ease;
     flex-shrink: 0;
     width: 30px;
+    height: 30px;
     text-align: center;
-    background: rgba(232, 72, 85, 0.1);
-    border: 1px solid rgba(232, 72, 85, 0.2);
-    border-radius: 6px;
-    padding: 0.3rem;
+    background: linear-gradient(135deg, rgba(232, 72, 85, 0.15) 0%, rgba(139, 0, 0, 0.1) 100%);
+    border: 2px solid rgba(232, 72, 85, 0.3);
+    border-radius: 50%;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 2px 8px rgba(232, 72, 85, 0.2);
 }
 
 .transport-item:hover .transport-icon {
     opacity: 1;
     filter: grayscale(0%);
     transform: scale(1.05);
-    background: rgba(232, 72, 85, 0.2);
+    background: linear-gradient(135deg, rgba(232, 72, 85, 0.25) 0%, rgba(139, 0, 0, 0.15) 100%);
     border-color: var(--accent-primary);
+    box-shadow: 0 4px 12px rgba(232, 72, 85, 0.4);
 }
 
 .transport-details {
