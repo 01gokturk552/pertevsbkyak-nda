@@ -1255,23 +1255,29 @@ body::before {
     width: 60px;
     height: 60px;
     text-align: center;
-    background: linear-gradient(135deg, rgba(232, 72, 85, 0.15) 0%, rgba(139, 0, 0, 0.1) 100%);
-    border: 2px solid rgba(232, 72, 85, 0.3);
+    background: linear-gradient(135deg, rgba(232, 72, 85, 0.25) 0%, rgba(139, 0, 0, 0.2) 100%);
+    border: 2px solid rgba(232, 72, 85, 0.4);
     border-radius: 50%;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(232, 72, 85, 0.2);
+    box-shadow: 0 4px 12px rgba(232, 72, 85, 0.3);
+}
+
+.contact-icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
 }
 
 .contact-item:hover .contact-icon {
     opacity: 1;
     filter: grayscale(0%);
     transform: scale(1.1);
-    background: linear-gradient(135deg, rgba(232, 72, 85, 0.25) 0%, rgba(139, 0, 0, 0.15) 100%);
+    background: linear-gradient(135deg, rgba(232, 72, 85, 0.35) 0%, rgba(139, 0, 0, 0.25) 100%);
     border-color: var(--accent-primary);
-    box-shadow: 0 6px 20px rgba(232, 72, 85, 0.4);
+    box-shadow: 0 6px 20px rgba(232, 72, 85, 0.5);
 }
 
 /* Instagram Icon Styling */
@@ -1432,23 +1438,29 @@ body::before {
     width: 32px;
     height: 32px;
     text-align: center;
-    background: linear-gradient(135deg, rgba(232, 72, 85, 0.15) 0%, rgba(139, 0, 0, 0.1) 100%);
-    border: 2px solid rgba(232, 72, 85, 0.3);
+    background: linear-gradient(135deg, rgba(232, 72, 85, 0.25) 0%, rgba(139, 0, 0, 0.2) 100%);
+    border: 2px solid rgba(232, 72, 85, 0.4);
     border-radius: 50%;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(232, 72, 85, 0.2);
+    box-shadow: 0 2px 8px rgba(232, 72, 85, 0.3);
+}
+
+.transport-icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
 }
 
 .transport-item:hover .transport-icon {
     opacity: 1;
     filter: grayscale(0%);
     transform: scale(1.05);
-    background: linear-gradient(135deg, rgba(232, 72, 85, 0.25) 0%, rgba(139, 0, 0, 0.15) 100%);
+    background: linear-gradient(135deg, rgba(232, 72, 85, 0.35) 0%, rgba(139, 0, 0, 0.25) 100%);
     border-color: var(--accent-primary);
-    box-shadow: 0 4px 12px rgba(232, 72, 85, 0.4);
+    box-shadow: 0 4px 12px rgba(232, 72, 85, 0.5);
 }
 
 .transport-details {
@@ -1498,6 +1510,12 @@ body::before {
     width: 36px;
     height: 36px;
     font-size: 1.4rem;
+}
+
+.transport-item-wide .transport-icon img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
 }
 
 .transport-item-wide .transport-details h4 {
