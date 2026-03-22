@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Başvuru — PertevSBK</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-logo">PertevSBK</a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Ana Sayfa</a>
+                <a href="komiteler.html" class="nav-link">Komiteler</a>
+                <a href="program.html" class="nav-link">Program</a>
+                <a href="ekibimiz.html" class="nav-link">Ekibimiz</a>
+                <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
+                <a href="faaliyetlerimiz.html" class="nav-link">Faaliyetler</a>
+                <a href="iletisim.html" class="nav-link">İletişim</a>
+                <a href="basvuru.html" class="nav-link nav-cta">Başvuru</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="page-hero">
+            <div class="container">
+                <h1>Başvuru</h1>
+                <p>PertevSBK 2026 etkinliğine başvurun ve fikirlerinizi paylaşın.</p>
+            </div>
+        </section>
+
+        <section class="application-content">
+            <div class="container">
+                <div class="application-grid">
+                    <div class="application-info">
+                        <h2>Başvuru Süreci</h2>
+                        <div class="process-steps">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h3>Başvuru Formunu Doldur</h3>
+                                    <p>Kişisel bilgilerinizi ve ilgi alanlarınızı belirtin.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h3>Komite Seçimi</h3>
+                                    <p>İlgilendiğiniz komiteyi seçin.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h3>Değerlendirme</h3>
+                                    <p>Başvurunuz komite tarafından değerlendirilir.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h3>Sonuç</h3>
+                                    <p>E-posta ile sonuç bildirimi yapılır.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="requirements">
+                            <h3>Başvuru Gereksinimleri</h3>
+                            <ul>
+                                <li>18-25 yaş arası olmak</li>
+                                <li>Lise veya üniversite öğrencisi olmak</li>
+                                <li>Tartışmaya ve fikir paylaşımına açık olmak</li>
+                                <li>2-3 Mayıs 2026 tarihinde etkinliğe katılabilmek</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="application-form">
+                        <h2>Başvuru Formu</h2>
+                        <form>
+                            <div class="form-section">
+                                <h3>Kişisel Bilgiler</h3>
+                                <div class="form-group">
+                                    <label for="fullName">Adınız Soyadınız *</label>
+                                    <input type="text" id="fullName" name="fullName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">E-posta Adresiniz *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Telefon Numaranız *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="birthDate">Doğum Tarihiniz *</label>
+                                    <input type="date" id="birthDate" name="birthDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="school">Okulunuz *</label>
+                                    <input type="text" id="school" name="school" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="grade">Sınıfınız/Bölümünüz *</label>
+                                    <input type="text" id="grade" name="grade" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h3>Komite Seçimi</h3>
+                                <div class="form-group">
+                                    <label for="committee">İlgi Alanınız (Komite) *</label>
+                                    <select id="committee" name="committee" required>
+                                        <option value="">Seçiniz...</option>
+                                        <option value="psikoloji">Psikoloji</option>
+                                        <option value="sosyoloji">Sosyoloji</option>
+                                        <option value="felsefe">Felsefe</option>
+                                        <option value="ekonomi">Ekonomi ve Sanayi</option>
+                                        <option value="hukuk">Hukuk</option>
+                                        <option value="sanat">Sanat</option>
+                                        <option value="medya">Medya</option>
+                                        <option value="egitim">Eğitim</option>
+                                        <option value="uluslararasi">Uluslararası İlişkiler ve Siyaset</option>
+                                        <option value="tarih">Tarih</option>
+                                        <option value="global">Global Issues</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="secondCommittee">İkinci İlgi Alanınız (Opsiyonel)</label>
+                                    <select id="secondCommittee" name="secondCommittee">
+                                        <option value="">Seçiniz...</option>
+                                        <option value="psikoloji">Psikoloji</option>
+                                        <option value="sosyoloji">Sosyoloji</option>
+                                        <option value="felsefe">Felsefe</option>
+                                        <option value="ekonomi">Ekonomi ve Sanayi</option>
+                                        <option value="hukuk">Hukuk</option>
+                                        <option value="sanat">Sanat</option>
+                                        <option value="medya">Medya</option>
+                                        <option value="egitim">Eğitim</option>
+                                        <option value="uluslararasi">Uluslararası İlişkiler ve Siyaset</option>
+                                        <option value="tarih">Tarih</option>
+                                        <option value="global">Global Issues</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h3>Motivasyon</h3>
+                                <div class="form-group">
+                                    <label for="motivation">Neden Katılmak İstiyorsunuz? *</label>
+                                    <textarea id="motivation" name="motivation" rows="5" required placeholder="PertevSBK etkinliğine neden katılmak istediğinizi ve bu etkinlikten beklentilerinizi yazın..."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="experience">İlgili Alanınızdaki Deneyimleriniz</label>
+                                    <textarea id="experience" name="experience" rows="4" placeholder="İlgili komite alanındaki deneyimlerinizi, projelerinizi veya çalışmalarınızı yazın..."></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h3>Ek Bilgiler</h3>
+                                <div class="form-group">
+                                    <label for="howDidYouHear">Bizi Nasıl Duydunuz?</label>
+                                    <select id="howDidYouHear" name="howDidYouHear">
+                                        <option value="">Seçiniz...</option>
+                                        <option value="instagram">Instagram</option>
+                                        <option value="friend">Arkadaş/Akraba</option>
+                                        <option value="school">Okul</option>
+                                        <option value="social">Sosyal Medya</option>
+                                        <option value="other">Diğer</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="accommodation">Konaklama İhtiyacınız var mı?</label>
+                                    <select id="accommodation" name="accommodation">
+                                        <option value="">Seçiniz...</option>
+                                        <option value="yes">Evet</option>
+                                        <option value="no">Hayır</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="questions">Sorularınız</label>
+                                    <textarea id="questions" name="questions" rows="3" placeholder="Bize sormak istediğiniz sorular varsa yazın..."></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label>
+                                    <input type="checkbox" name="terms" required>
+                                    <a href="hakkimizda.html" target="_blank">Kullanım koşullarını</a> ve <a href="iletisim.html" target="_blank">gizlilik politikasını</a> okudum, kabul ediyorum.
+                                </label>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Başvuruyu Gönder</button>
+                                <button type="reset" class="btn btn-secondary">Formu Temizle</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Son Başvuru Tarihi</h2>
+                <p>Başvurular 30 Nisan 2026 tarihine kadar devam edecektir.</p>
+                <div class="deadline-info">
+                    <div class="countdown-box">
+                        <div class="countdown" id="deadlineCountdown">
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="dDays">00</span>
+                                <span class="countdown-label">GÜN</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="dHours">00</span>
+                                <span class="countdown-label">SAAT</span>
+                            </div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="dMinutes">00</span>
+                                <span class="countdown-label">DAKİKA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>PertevSBK</h4>
+                    <p>Gençlerin fikir meydanlarında buluştuğu düşünce ve üretim platformu.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Ana Sayfa</a>
+                    <a href="hakkimizda.html">Hakkımızda</a>
+                    <a href="iletisim.html">İletişim</a>
+                    <a href="https://www.instagram.com/pertevsbk/" target="_blank">Instagram</a>
+                </div>
+                <div class="footer-credits">
+                    <p>Bu site <span>PertevSBK için Yiğit Efe SEVİR</span> tarafından tasarlandı ve geliştirildi</p>
+                    <p>© 2026 PertevSBK Tüm hakları saklıdır.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobil menü toggle
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+        
+        // Menü linklerine tıklandığında menüyü kapat
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navMenu = document.getElementById('navMenu');
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        // Başvuru deadline countdown
+        const deadlineDate = new Date('April 30, 2026 23:59:59').getTime();
+        
+        function updateDeadlineCountdown() {
+            const now = new Date().getTime();
+            const distance = deadlineDate - now;
+            
+            if (distance > 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                
+                document.getElementById('dDays').innerText = days.toString().padStart(2, '0');
+                document.getElementById('dHours').innerText = hours.toString().padStart(2, '0');
+                document.getElementById('dMinutes').innerText = minutes.toString().padStart(2, '0');
+            } else {
+                document.getElementById('deadlineCountdown').innerHTML = '<div class="event-live">BAŞVURU SÜRESİ DOLDU</div>';
+            }
+        }
+        
+        setInterval(updateDeadlineCountdown, 1000);
+        updateDeadlineCountdown();
+    </script>
+</body>
+</html>

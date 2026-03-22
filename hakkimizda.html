@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda — PertevSBK</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="nav-logo">PertevSBK</a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Ana Sayfa</a>
+                <a href="komiteler.html" class="nav-link">Komiteler</a>
+                <a href="program.html" class="nav-link">Program</a>
+                <a href="ekibimiz.html" class="nav-link">Ekibimiz</a>
+                <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
+                <a href="faaliyetlerimiz.html" class="nav-link">Faaliyetler</a>
+                <a href="iletisim.html" class="nav-link">İletişim</a>
+                <a href="basvuru.html" class="nav-link nav-cta">Başvuru</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="page-hero">
+            <div class="container">
+                <h1>Hakkımızda</h1>
+                <p>PertevSBK'nın hikayesi, vizyonu ve misyonu.</p>
+            </div>
+        </section>
+
+        <section class="about-content">
+            <div class="container">
+                <div class="about-text">
+                    <h2>Vizyonumuz</h2>
+                    <p>Gençlerin fikir meydanlarında buluştuğu, düşüncenin ve üretimin merkezde olduğu bir platform oluşturmak. Ulusal ve küresel meseleleri tartışarak yeni nesil düşünce liderleri yetiştirmeyi hedefliyoruz.</p>
+                    
+                    <h2>Misyonumuz</h2>
+                    <p>Gençleri bir araya getirerek kritik düşünme, tartışma kültürü ve üretkenlik becerilerini geliştirmek. 11 farklı alanda uzman moderatörler eşliğinde derinlemesine tartışmalar ve üretim atölyeleri düzenlemek.</p>
+                    
+                    <h2>Değerlerimiz</h2>
+                    <ul class="values-list">
+                        <li><strong>Düşünce Özgürlüğü:</strong> Her fikrin değerli olduğu ve tartışılabileceği ortam</li>
+                        <li><strong>Kritik Düşünme:</strong> Sorgulayıcı ve analitik yaklaşım</li>
+                        <li><strong>İş Birliği:</strong> Birlikte öğrenme ve üretme kültürü</li>
+                        <li><strong>Çeşitlilik:</strong> Farklı bakış açılarının zenginliği</li>
+                        <li><strong>Üretkenlik:</strong> Tartışmalardan somut çıktılar elde etme</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">11</div>
+                        <div class="stat-label">Komite</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Gün</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Katılımcı</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Uzman</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Bu Yolculukta Bize Katılın</h2>
+                <p>PertevSBK'nın bir parçası olarak fikirlerinizi paylaşabilir ve yeni şeyler öğrenebilirsiniz.</p>
+                <div class="cta-buttons">
+                    <a href="basvuru.html" class="btn btn-primary">Hemen Başvur</a>
+                    <a href="komiteler.html" class="btn btn-secondary">Komiteleri Keşfet</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>PertevSBK</h4>
+                    <p>Gençlerin fikir meydanlarında buluştuğu düşünce ve üretim platformu.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Ana Sayfa</a>
+                    <a href="hakkimizda.html">Hakkımızda</a>
+                    <a href="iletisim.html">İletişim</a>
+                    <a href="https://www.instagram.com/pertevsbk/" target="_blank">Instagram</a>
+                </div>
+                <div class="footer-credits">
+                    <p>Bu site <span>PertevSBK için Yiğit Efe SEVİR</span> tarafından tasarlandı ve geliştirildi</p>
+                    <p>© 2026 PertevSBK Tüm hakları saklıdır.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobil menü toggle
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+        
+        // Menü linklerine tıklandığında menüyü kapat
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navMenu = document.getElementById('navMenu');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
