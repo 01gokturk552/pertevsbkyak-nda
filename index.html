@@ -32,9 +32,30 @@
             <div class="hero-content">
                 <h1>PertevSBK</h1>
                 <p>Gençlerin fikir meydanlarında buluştuğu, düşüncenin ve üretimin merkezde olduğu bir platform.</p>
+                <h2>2-3 Mayıs 2026'da Buluşuyoruz</h2>
                 <div class="hero-cta">
                     <a href="basvuru.html" class="btn btn-primary">Hemen Başvur</a>
                     <a href="komiteler.html" class="btn btn-secondary">Komiteleri İncele</a>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown" id="countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="days">00</span>
+                            <span class="countdown-label">GÜN</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="hours">00</span>
+                            <span class="countdown-label">SAAT</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="minutes">00</span>
+                            <span class="countdown-label">DAKİKA</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="seconds">00</span>
+                            <span class="countdown-label">SANİYE</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -53,7 +74,7 @@
                     
                     <p>Bu inançla, sizleri PertevSBK çatısı altında düşünmeye, tartışmaya, üretmeye ve unutulmaz bir deneyim yaşamaya davet ediyoruz.</p>
                     
-                    <p class="signature">BALİŞTAY,<br>PertevSBK Yönetimi<br>Pertevniyal Sosyal Bilimler Kulübü</p>
+                    <p class="signature">PertevSBK,<br>PertevSBK Yönetimi<br>Pertevniyal Sosyal Bilimler Kulübü</p>
                 </div>
                 
                 <h2>Hangi Komitede Yer Alacaksınız?</h2>
@@ -108,45 +129,7 @@
             </div>
         </section>
 
-        <section class="countdown-section">
-            <div class="container">
-                <h2>2-3 Mayıs 2026'da Buluşuyoruz</h2>
-                <div class="countdown-container">
-                    <div class="countdown-box">
-                        <div class="countdown" id="countdown">
-                            <div class="countdown-item">
-                                <span class="countdown-number" id="days">00</span>
-                                <span class="countdown-label">GÜN</span>
-                            </div>
-                            <div class="countdown-item">
-                                <span class="countdown-number" id="hours">00</span>
-                                <span class="countdown-label">SAAT</span>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon instagram-icon">
-                                    <img src="images/instagram.png" alt="Instagram" style="width: 24px; height: 24px;">
-                                </div>
-                                <div class="contact-details">
-                                    <h3>Instagram</h3>
-                                    <div class="social-links">
-                                        <a href="https://instagram.com/pertevsbk" target="_blank" class="social-link">@pertevsbk</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="social-cta">
-                    <p>Bizi sosyal medyadan takip ederek gelişmeleri anlık olarak takip edebilirsiniz.</p>
-                    <a href="https://instagram.com/pertevsbk" class="social-link" target="_blank">
-                        <span>📷</span>
-                        <span>Instagram'da Takip Et</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+        </main>
 
     <footer class="footer">
         <div class="container">
@@ -188,6 +171,34 @@
                 navMenu.classList.remove('active');
             });
         });
+
+        // Geri sayım fonksiyonu
+        function updateCountdown() {
+            const eventDate = new Date('May 2, 2026 09:00:00').getTime();
+            const now = new Date().getTime();
+            const timeLeft = eventDate - now;
+
+            if (timeLeft > 0) {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            } else {
+                document.getElementById('days').textContent = '00';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+            }
+        }
+
+        // Sayfa yüklendiğinde ve her saniye güncelle
+        document.addEventListener('DOMContentLoaded', updateCountdown);
+        setInterval(updateCountdown, 1000);
     </script>
 </body>
 </html>
