@@ -1274,6 +1274,27 @@ body::before {
     box-shadow: 0 6px 20px rgba(232, 72, 85, 0.4);
 }
 
+/* Instagram Icon Styling */
+.instagram-icon {
+    background: transparent !important;
+    border: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instagram-icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.instagram-icon:hover {
+    background: rgba(131, 58, 180, 0.1) !important;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(131, 58, 180, 0.2) !important;
+}
+
 .contact-details {
     flex: 1;
     text-align: left;
