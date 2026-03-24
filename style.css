@@ -2363,10 +2363,26 @@ body::before {
 }
 
 .stat-number {
-    font-size: 3rem;
-    font-weight: 900;
+    font-size: 2.5rem;
+    font-weight: 800;
     color: white;
     margin-bottom: 0.5rem;
+}
+
+.stat-number.loading {
+    animation: pulse 1.5s ease-in-out infinite;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(0.95);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
 }
 
 .stat-label {
@@ -2487,6 +2503,47 @@ body::before {
     font-weight: 700;
     color: white;
     margin-bottom: 2rem;
+}
+
+/* Stats Section Contact Item */
+.stats-section .contact-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    margin-bottom: 0;
+}
+
+.stats-section .contact-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.stats-section .contact-icon {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.stats-section .social-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 .contact-item {
