@@ -300,6 +300,49 @@ body::before {
 }
 
 /* About Section */
+/* Photo Placeholder */
+.photo-placeholder {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 4rem 2rem;
+    text-align: center;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.photo-placeholder:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.photo-placeholder-content {
+    max-width: 400px;
+}
+
+.photo-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0.7;
+}
+
+.photo-placeholder h3 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.photo-placeholder p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
 .about {
     padding: 6rem 0;
     background: rgba(0, 0, 0, 0.3);
