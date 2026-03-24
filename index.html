@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PertevSBK - 2-3 Mayıs 2026'da gençlerin fikir meydanlarında buluştuğu düşünce ve üretim platformu. 9 komite, 500+ katılımcı, profesyonel organizasyon.">
+    <meta name="keywords" content="PertevSBK, sosyal bilimler, komiteler, etkinlik, gençlik, düşünce platformu, 2026">
+    <meta name="author" content="PertevSBK">
     <title>PertevSBK — Çok Yakında!</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +22,7 @@
                 <a href="index.html" class="nav-link">Ana Sayfa</a>
                 <a href="komiteler/komiteler.html" class="nav-link">Komiteler</a>
                 <a href="program.html" class="nav-link">Program</a>
-                <a href="ekibimiz.html" class="nav-link">Ekibimiz</a>
+                <a href="ekibimiz/ekibimiz.html" class="nav-link">Ekibimiz</a>
                 <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
                 <a href="iletisim.html" class="nav-link">İletişim</a>
                 <a href="basvuru.html" class="nav-link nav-cta">Başvuru</a>
@@ -35,7 +38,7 @@
                 <h2>2-3 Mayıs 2026'da Buluşuyoruz</h2>
                 <div class="hero-cta">
                     <a href="basvuru.html" class="btn btn-primary">Hemen Başvur</a>
-                    <a href="komiteler.html" class="btn btn-secondary">Komiteleri İncele</a>
+                    <a href="komiteler/komiteler.html" class="btn btn-secondary">Komiteleri İncele</a>
                 </div>
                 <div class="countdown-box">
                     <div class="countdown" id="countdown">
@@ -184,15 +187,11 @@
                 const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-                document.getElementById('days').textContent = days.toString().padStart(2, '0');
-                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-            } else {
-                document.getElementById('days').textContent = '00';
-                document.getElementById('hours').textContent = '00';
-                document.getElementById('minutes').textContent = '00';
-                document.getElementById('seconds').textContent = '00';
+                // Ana sayaç
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
             }
         }
 

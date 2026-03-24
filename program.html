@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PertevSBK 2026 Program Akışı - 2-3 Mayıs tarihlerinde gerçekleşecek etkinliklerin detaylı programı. Oturumlar, atölyeler ve özel etkinlikler.">
+    <meta name="keywords" content="PertevSBK, program, etkinlik takvimi, oturumlar, atölyeler, 2026">
+    <meta name="author" content="PertevSBK">
     <title>Program Akışı — PertevSBK</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,13 +22,31 @@
                 <a href="index.html" class="nav-link">Ana Sayfa</a>
                 <a href="komiteler/komiteler.html" class="nav-link">Komiteler</a>
                 <a href="program.html" class="nav-link">Program</a>
-                <a href="ekibimiz.html" class="nav-link">Ekibimiz</a>
+                <a href="ekibimiz/ekibimiz.html" class="nav-link">Ekibimiz</a>
                 <a href="hakkimizda.html" class="nav-link">Hakkımızda</a>
                 <a href="iletisim.html" class="nav-link">İletişim</a>
                 <a href="basvuru.html" class="nav-link nav-cta">Başvuru</a>
             </div>
         </nav>
     </header>
+
+    <div class="mini-countdown">
+        <h4>PertevSBK'a Kalan</h4>
+        <div class="mini-countdown-timer" id="miniCountdown">
+            <div class="mini-countdown-item">
+                <span class="mini-countdown-number" id="miniDays">00</span>
+                <span class="mini-countdown-label">GÜN</span>
+            </div>
+            <div class="mini-countdown-item">
+                <span class="mini-countdown-number" id="miniHours">00</span>
+                <span class="mini-countdown-label">SAAT</span>
+            </div>
+            <div class="mini-countdown-item">
+                <span class="mini-countdown-number" id="miniMinutes">00</span>
+                <span class="mini-countdown-label">DAK</span>
+            </div>
+        </div>
+    </div>
 
     <main class="main">
         <section class="page-hero">
@@ -292,6 +313,27 @@
                 navMenu.classList.remove('active');
             });
         });
+
+        // Mini sayaç fonksiyonu
+        function updateMiniCountdown() {
+            const eventDate = new Date('May 2, 2026 09:00:00').getTime();
+            const now = new Date().getTime();
+            const timeLeft = eventDate - now;
+
+            if (timeLeft > 0) {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+
+                document.getElementById('miniDays').textContent = String(days).padStart(2, '0');
+                document.getElementById('miniHours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('miniMinutes').textContent = String(minutes).padStart(2, '0');
+            }
+        }
+
+        // Sayfa yüklendiğinde ve her saniye güncelle
+        document.addEventListener('DOMContentLoaded', updateMiniCountdown);
+        setInterval(updateMiniCountdown, 1000);
     </script>
 </body>
 </html>
