@@ -13,7 +13,7 @@
 <body>
     <header class="header">
         <nav class="nav">
-            <a href="../index.html" class="nav-logo">PertevSBK</a>
+            <a href="https://pertevsbk.com/" target="_blank" class="nav-logo">PertevSBK</a>
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <div class="nav-menu" id="navMenu">
                 <a href="../index.html" class="nav-link">Ana Sayfa</a>
@@ -26,6 +26,24 @@
             </div>
         </nav>
     </header>
+
+    <div class="mini-countdown">
+        <h4>PertevSBK'a Kalan</h4>
+        <div class="mini-countdown-timer" id="miniCountdown">
+            <div class="mini-countdown-item">
+                <span class="mini-countdown-number" id="miniDays">00</span>
+                <span class="mini-countdown-label">GÜN</span>
+            </div>
+            <div class="mini-countdown-item">
+                <span class="mini-countdown-number" id="miniHours">00</span>
+                <span class="mini-countdown-label">SAAT</span>
+            </div>
+            <div class="mini-countdown-item">
+                <span class="mini-countdown-number" id="miniMinutes">00</span>
+                <span class="mini-countdown-label">DAK</span>
+            </div>
+        </div>
+    </div>
 
     <main class="main">
         <section class="page-hero">
@@ -225,16 +243,6 @@
             </div>
         </section>
 
-        <section class="cta-section">
-            <div class="container">
-                <h2>Ekibe Katılın</h2>
-                <p>PertevSBK'26 mümkün kılan liderler ve birim başkanları.</p>
-                <div class="cta-buttons">
-                    <a href="../basvuru.html" class="btn btn-primary">Gönüllü Ol</a>
-                    <a href="../iletisim.html" class="btn btn-secondary">İletişime Geç</a>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="footer">
@@ -273,6 +281,27 @@
                 navMenu.classList.remove('active');
             });
         });
+
+        // Mini sayaç fonksiyonu
+        function updateMiniCountdown() {
+            const eventDate = new Date('May 2, 2026 09:00:00').getTime();
+            const now = new Date().getTime();
+            const timeLeft = eventDate - now;
+
+            if (timeLeft > 0) {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+
+                document.getElementById('miniDays').textContent = String(days).padStart(2, '0');
+                document.getElementById('miniHours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('miniMinutes').textContent = String(minutes).padStart(2, '0');
+            }
+        }
+
+        // Sayfa yüklendiğinde ve her saniye güncelle
+        document.addEventListener('DOMContentLoaded', updateMiniCountdown);
+        setInterval(updateMiniCountdown, 1000);
     </script>
 </body>
 </html>
