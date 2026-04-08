@@ -541,7 +541,54 @@ body::before {
     }
 }
 
-/* Mobile - countdown solda sabit */
+/* Sayaçları tamamen kaldır */
+.countdown-box,
+.mini-countdown {
+    display: none !important;
+}
+
+.countdown-number,
+.mini-countdown-number {
+    display: none !important;
+}
+
+.countdown-label,
+.mini-countdown-label {
+    display: none !important;
+}
+
+.countdown h4 {
+    display: none !important;
+}
+
+.countdown {
+    display: none !important;
+}
+.countdown-box,
+.mini-countdown {
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+.countdown-number,
+.mini-countdown-number {
+    will-change: opacity;
+    text-rendering: optimizeLegibility;
+}
+
+/* Reduce paint operations */
+body {
+    contain: layout style;
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+    .countdown-box,
+    .mini-countdown {
+        transition: none;
+    }
+}
 @media (max-width: 768px) {
     .countdown-box {
         position: fixed;
