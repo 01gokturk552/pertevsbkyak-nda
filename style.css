@@ -504,6 +504,21 @@ body::before {
     margin-bottom: 0;
 }
 
+/* Mouse engelleme ve şeffaf arka plan */
+.countdown-box {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 2rem 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
 /* Desktop - countdown ortaya al */
 @media (min-width: 769px) {
     .countdown-box {
@@ -521,6 +536,8 @@ body::before {
         margin-top: 2rem;
         margin-bottom: 0;
         z-index: 1000;
+        pointer-events: auto;
+        user-select: auto;
     }
 }
 
@@ -541,6 +558,8 @@ body::before {
         margin-top: 2rem;
         margin-bottom: 0;
         z-index: 1000;
+        pointer-events: none;
+        user-select: none;
     }
 }
 
