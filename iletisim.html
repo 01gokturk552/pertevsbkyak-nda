@@ -42,6 +42,10 @@
                 <span class="mini-countdown-number" id="miniMinutes">00</span>
                 <span class="mini-countdown-label">DAK</span>
             </div>
+            <div class="mini-countdown-item">
+                <span class="mini-countdown-number" id="miniSeconds">00</span>
+                <span class="mini-countdown-label">SAN</span>
+            </div>
         </div>
     </div>
 
@@ -246,10 +250,12 @@
                 const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
                 document.getElementById('miniDays').textContent = String(days).padStart(2, '0');
                 document.getElementById('miniHours').textContent = String(hours).padStart(2, '0');
                 document.getElementById('miniMinutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('miniSeconds').textContent = String(seconds).padStart(2, '0');
             }
         }
 
