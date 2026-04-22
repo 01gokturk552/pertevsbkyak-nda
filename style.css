@@ -2419,8 +2419,30 @@ body {
 }
 
 .member-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
     flex-shrink: 0;
     margin-bottom: 0;
+    border: 2px solid var(--accent-primary);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.member-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover .member-avatar-img {
+    transform: scale(1.1);
+}
+
+.team-member:hover .member-avatar {
+    border-color: var(--accent-secondary);
 }
 
 .avatar-placeholder {
