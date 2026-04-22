@@ -536,38 +536,6 @@ body::before {
         margin-top: 2rem;
         margin-bottom: 0;
         z-index: 1000;
-        pointer-events: auto;
-        user-select: auto;
-    }
-}
-
-/* Sayaçları tamamen kaldır */
-.countdown-box,
-.mini-countdown {
-    display: none !important;
-}
-
-.countdown-number,
-.mini-countdown-number {
-    display: none !important;
-}
-
-.countdown-label,
-.mini-countdown-label {
-    display: none !important;
-}
-
-.countdown h4 {
-    display: none !important;
-}
-
-.countdown {
-    display: none !important;
-}
-.countdown-box,
-.mini-countdown {
-    will-change: transform;
-    backface-visibility: hidden;
     transform: translateZ(0);
 }
 
