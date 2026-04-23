@@ -641,6 +641,26 @@ body {
         max-width: 90%;
     }
     
+    /* Mobilde countdown'i yatay yap */
+    .countdown {
+        flex-direction: row !important;
+        gap: 1rem !important;
+        align-items: center !important;
+    }
+    
+    .countdown-item {
+        min-width: 60px !important;
+        flex: 1 !important;
+    }
+    
+    .countdown-number {
+        font-size: 1.5rem !important;
+    }
+    
+    .countdown-label {
+        font-size: 0.7rem !important;
+    }
+    
     /* Diğer sayfalardaki mini-countdown'ı mobilde gizle */
     .mini-countdown {
         display: none !important;
