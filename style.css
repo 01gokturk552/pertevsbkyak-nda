@@ -200,8 +200,29 @@ body::before {
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.team-photo {
+    margin-top: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-photo-img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.team-photo-img:hover {
+    transform: scale(1.02);
 }
 
 .hero h1 {
@@ -222,6 +243,23 @@ body::before {
     margin-bottom: 3rem;
     line-height: 1.8;
 }
+
+.hero h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    background: linear-gradient(45deg, #ffffff, rgba(255, 255, 255, 0.8));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+}
+
 
 /* Buttons */
 .btn {
@@ -455,8 +493,10 @@ body::before {
 
 .mini-countdown-timer {
     display: flex;
+    flex-direction: row;
     gap: 0.8rem;
     justify-content: center;
+    align-items: center;
 }
 
 .mini-countdown-item {
@@ -531,7 +571,7 @@ body::before {
 @media (min-width: 769px) {
     .countdown-box {
         position: fixed;
-        top: 40%;
+        top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
         background: rgba(255, 255, 255, 0.08);
@@ -555,17 +595,18 @@ body::before {
 
 /* Professional Countdown Design */
 .hero-countdown {
-    margin-top: 4rem;
+    margin-top: 38.5rem;
     text-align: center;
 }
 
 .hero-countdown h3 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 2rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 /* Reduce paint operations */
@@ -583,21 +624,26 @@ body {
 @media (max-width: 768px) {
     .countdown-box {
         position: fixed;
-        top: 20px;
-        left: 20px;
-        transform: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         background: rgba(255, 255, 255, 0.08);
         backdrop-filter: blur(15px);
         border: 2px solid rgba(255, 255, 255, 0.15);
-        border-radius: 20px;
-        padding: 2rem 3rem;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        padding: 1rem 1.5rem;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
         transition: all 0.3s ease;
-        margin-top: 2rem;
-        margin-bottom: 0;
+        margin: 0;
         z-index: 1000;
         pointer-events: none;
         user-select: none;
+        max-width: 90%;
+    }
+    
+    /* Diğer sayfalardaki mini-countdown'ı mobilde gizle */
+    .mini-countdown {
+        display: none !important;
     }
 }
 
@@ -609,8 +655,10 @@ body {
 
 .countdown {
     display: flex;
+    flex-direction: row;
     gap: 2rem;
     justify-content: center;
+    align-items: center;
 }
 
 .countdown-item {
@@ -790,7 +838,7 @@ body {
     gap: 1.5rem;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 14rem;
     flex-wrap: wrap;
 }
 
@@ -3022,7 +3070,10 @@ body {
 
 .deadline-info .countdown {
     display: flex;
+    flex-direction: row;
     gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .deadline-info .countdown-item {
