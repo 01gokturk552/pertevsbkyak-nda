@@ -625,7 +625,7 @@ body {
 @media (max-width: 768px) {
     .countdown-box {
         position: fixed !important;
-        top: 32% !important;
+        top: 20% !important;
         left: 50% !important;
         transform: translate(-50%, -50%) !important;
         background: rgba(255, 255, 255, 0.08) !important;
